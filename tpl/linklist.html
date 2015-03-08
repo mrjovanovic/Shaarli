@@ -35,9 +35,19 @@
             <div class="linkcontainer">
                 {if="isLoggedIn()"}
                     <div class="linkeditbuttons">
-                        <form method="GET" class="buttoneditform"><input type="hidden" name="edit_link" value="{$value.linkdate}"><input type="image" alt="Edit" src="images/edit_icon.png#" title="Edit" class="button_edit"></form><br>
+                        <form method="GET" class="buttoneditform">
+                            <input type="hidden" name="edit_link" value="{$value.linkdate}">
+                            <button class="button_edit">
+                                ✎
+                            </button>
+                        </form><br>
                         <form method="POST" class="buttoneditform"><input type="hidden" name="lf_linkdate" value="{$value.linkdate}">
-                        <input type="hidden" name="token" value="{$token}"><input type="hidden" name="delete_link"><input type="image" alt="Delete" src="images/delete_icon.png#" title="Delete" class="button_delete" onClick="return confirmDeleteLink();"></form>
+                        <input type="hidden" name="token" value="{$token}">
+                        <input type="hidden" name="delete_link">
+                        <button class="button_delete" onClick="return confirmDeleteLink();">
+                            ✖
+                        </button>
+                        </form>
                     </div>
                 {/if}
                 <span class="linktitle"><a href="{$redirector}{$value.url|htmlspecialchars}">{$value.title|htmlspecialchars}</a></span>
