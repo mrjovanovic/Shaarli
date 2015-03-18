@@ -17,7 +17,7 @@ input, textarea {
     background: linear-gradient(#dedede, #ffffff);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     padding: 5px;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 3px 3px 3px 3px;
     border: none;
     color: #000;
 }
@@ -84,21 +84,14 @@ h1 {
 
 .linkeditbuttons {
     position: absolute;
-    left: -1px;
+    left: 2px;
     padding: 4px 2px 2px 2px;
-    background-color: #f0f0f0;
 
     -webkit-border-radius: 0px 6px 6px 0px;
     -moz-border-radius: 0px 6px 6px 0px;
     -o-border-radius: 0px 6px 6px 0px;
     -ms-border-radius: 0px 6px 6px 0px;
     border-radius: 0px 6px 6px 0px;
-
-    -webkit-box-shadow: 0px 0px 3px 0px #333333;
-    -moz-box-shadow: 0px 0px 3px 0px #333333;
-    -o-box-shadow: 0px 0px 3px 0px #333333;
-    -ms-box-shadow: 0px 0px 3px 0px #333333;
-    box-shadow: 0px 0px 3px 0px #333333;
 }
 
 #pageheader #logo {
@@ -111,12 +104,48 @@ h1 {
     cursor: pointer;
 }
 
+#pageheader #menu {
+    width: 100%;
+}
+
+#pageheader #menu ul {
+    margin: auto;
+    padding: 7px 0px 0px 0px;
+    float: none;
+}
+
+#pageheader #menu ul li {
+    list-style: none;
+    display: inline;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#pageheader a {
+    background-color: #333333;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#333333), to(#000000));
+    background: -webkit-linear-gradient(#333333, #000000);
+    background: -moz-linear-gradient(#333333, #000000);
+    background: -ms-linear-gradient(#333333, #000000);
+    background: -o-linear-gradient(#333333, #000000);
+    background: linear-gradient(#333333, #000000);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 3px 3px 3px 3px;
+    margin: 10px 3px 3px 3px;
+    color: #A2DD42;
+    text-decoration: none;
+    line-height: 2.5;
+    white-space: nowrap;
+}
+
 #pageheader #linkcount {
     float: right;
     font-style: italic;
     color: #bbb;
     text-align: right;
     padding-right: 5px;
+    margin: 3px 3px 0px 0px;
 }
 
 #pageheader {
@@ -131,23 +160,6 @@ h1 {
     width: auto;
     padding: 0 10px 5px 10px;
     margin: auto;
-}
-
-#pageheader a {
-    background-color: #333333;
-    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#333333), to(#000000));
-    background: -webkit-linear-gradient(#333333, #000000);
-    background: -moz-linear-gradient(#333333, #000000);
-    background: -ms-linear-gradient(#333333, #000000);
-    background: -o-linear-gradient(#333333, #000000);
-    background: linear-gradient(#333333, #000000);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-    padding: 5px;
-    border-radius: 5px 5px 5px 5px;
-    margin: 10px 3px 3px 3px;
-    color: #A2DD42;
-    float: left;
-    text-decoration: none;
 }
 
 #pageheader .search {
@@ -179,7 +191,7 @@ h1 {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     padding: 5px;
     border: none;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 3px 3px 3px 3px;
     margin: 10px 3px 3px 3px;
     color: #cecece;
 }
@@ -225,7 +237,7 @@ h1 {
     padding: 0 5px 0 5px;
     margin: 5px 0 5px 0;
     height: 20px;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 3px 3px 3px 3px;
     cursor: pointer;
 }
 
@@ -291,6 +303,7 @@ h1 {
 .paging_linksperpage {
     float: right;
     padding-right: 5px;
+    margin: 0px 10px 2px 0px;
 }
 
 .paging_linksperpage form.linksperpage {
@@ -323,6 +336,7 @@ h1 {
 
 #headerform input.linkurl {
     width: 50%;
+    font-size: inherit;
 }
 
 #toolsdiv {
@@ -339,10 +353,13 @@ h1 {
 
 #editlinkform {
     height: 100%;
-    color: #ffffff;
     padding: 5px 5px 5px 15px;
     width: 80%;
     clear: left;
+}
+
+#editlinkform label {
+    color: #ffffff;
 }
 
 #editlinkform textarea, #editlinkform .lf_input {
@@ -388,12 +405,12 @@ a.qrcode img {
 }
 
 #linklist li.private {
-    background: url('../images/private.png') no-repeat 10px center;
-    padding-left: 60px;
+    background: url('../images/private.png') no-repeat 4px center;
+    padding-left: 30px;
 }
 
 #linklist li {
-    padding-left: 26px;
+    padding-left: 30px;
 }
 
 .private .linktitle a {
@@ -468,9 +485,9 @@ a.qrcode img {
     background: -o-linear-gradient(#F2F2F2, #ffffff);
     background: linear-gradient(#F2F2F2, #ffffff);
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-    padding: 3px 3px 3px 20px;
+    padding: 3px 5px 3px 20px;
     height: 20px;
-    border-radius: 3px 3px 3px 3px;
+    border-radius: 3px;
     cursor: pointer;
     background-image: url('../images/tag_blue.png');
     background-repeat: no-repeat;
@@ -515,9 +532,10 @@ a.qrcode img {
 #footer {
     font-size: 8pt;
     text-align: center;
-    border-top: 1px solid #ddd;
     color: #888;
     clear: both;
+    max-width: 30em;
+    margin: 15px auto 15px auto;
 }
 
 #footer a {
@@ -599,6 +617,17 @@ a.qrcode img {
     margin-left: 40px;
 }
 
+#changetag div {
+    float:left;
+}
+
+#changetag label {
+    padding: 5px;
+}
+
+#changetag li {
+    color: #000;
+}
 #configform td {
     color: #ccc;
     font-size: 10pt;
@@ -613,7 +642,12 @@ a.qrcode img {
 
 .thumbnail {
     float: right;
-    margin-left: 10px;
+    margin: 0px 10px 0px 10px;
+}
+
+.thumbnail img {
+    border-radius: 3px;
+    box-shadow: 0.5px 0.5px 0.5px 1px #dde4e6;
 }
 
 /* If you want thumbnails on the left:
@@ -689,17 +723,6 @@ a.qrcode img {
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#66000000, endColorstr=#66000000);
     /* IE6IE9 */
     text-shadow: 2px 2px 1px #000000;
-}
-
-/* Minimal customisation for jQuery widgets */
-.ui-autocomplete {
-    background-color: #fff;
-    padding-left: 5px;
-}
-
-.ui-state-hover {
-    background-color: #604dff;
-    color: #fff;
 }
 
 #linklist li.publicLinkHightLight {
@@ -856,6 +879,10 @@ div.dailyNoEntry {
     text-align: right;
 }
 
+.white {
+    color: white;
+}
+
 /* For lazy images loading in picture wall.
    Using http://www.appelsiini.net/projects/lazyload
 */
@@ -938,17 +965,21 @@ div.dailyNoEntry {
 	display: none;
     }
 
-    #pageheader a {
+    #pageheader #menu ul {
+        text-align: center;
+    }
+
+    #pageheader #menu a {
 	padding: 5px;
-	border-radius: 5px 5px 5px 5px;
+	border-radius: 3px 3px 3px 3px;
 	margin: 3px;
     }
 
     .searchform, .tagfilter {
 	display: block !important;
-	margin: 0px !important;
+	margin: 0px 3px 7px 0px !important;
 	padding: 0px !important;
-	width: 100% !important;
+	width: 97% !important;
     }
 
     .searchform input, .tagfilter input {
@@ -992,7 +1023,7 @@ div.dailyNoEntry {
 	padding: 3px 5px 3px 5px;
 	background-color: #666;
 	color: #fff;
-	border-radius: 5px 5px 5px 5px;
+	border-radius: 3px 3px 3px 3px;
     }
 
     .thumbnail {
